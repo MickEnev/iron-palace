@@ -21,8 +21,10 @@ const Hero = () => {
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button>Sign Up Now</Button>
-            <Button variant="secondary">Schedule a Tour</Button>
+            <Button href="/join">Sign Up Now</Button>
+            <Button href="/tours" variant="secondary">
+              Schedule a Tour
+            </Button>
           </div>
         </div>
       </Container>
