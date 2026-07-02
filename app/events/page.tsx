@@ -89,7 +89,7 @@ const page = () => {
   return (
     <Section>
       <div className="mx-auto flex w-full max-w-7xl flex-col">
-        <div className="group relative aspect-[1672/941] overflow-hidden rounded-2xl border border-white/20 transition-transform duration-500 ease-out hover:scale-[1.02]">
+        <div className="group relative aspect-1672/941 overflow-hidden rounded-2xl border border-white/20 transition-transform duration-500 ease-out hover:scale-[1.02]">
           <Image
             src={eventCalendar}
             alt="Event Calendar"
@@ -103,13 +103,13 @@ const page = () => {
           {events.map((event) => (
             <article
               key={event.title}
-              className="flex min-h-[32rem] flex-col rounded-2xl border border-[#9c8560] bg-[#0d0d0d] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out [container-type:inline-size] hover:scale-[1.02] sm:p-6"
+              className="flex min-h-128 flex-col rounded-2xl border border-[#9c8560] bg-[#0d0d0d] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition-transform duration-500 ease-out @container hover:scale-[1.02] sm:p-6"
             >
               <p className="text-[clamp(1rem,5cqw,1.125rem)] font-black leading-none text-white">
                 {event.type}
               </p>
 
-              <h2 className="mt-8 font-heading text-[clamp(2rem,11cqw,2.75rem)] font-black uppercase leading-[0.9] text-white [text-wrap:balance]">
+              <h2 className="mt-8 font-heading text-[clamp(2rem,11cqw,2.75rem)] font-black uppercase leading-[0.9] text-white text-balance">
                 {event.title}
               </h2>
 
