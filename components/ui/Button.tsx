@@ -14,7 +14,7 @@ const Button = ({ children, variant = "primary", href }: ButtonProps) => {
     primary:
       "bg-[var(--primary)] text-black hover:bg-[var(--primary-hover)] cursor-pointer",
     secondary:
-      "border border-[var(--border)] bg-transparent text-[var(--foreground)] hover:bg-[var(--surface)] cursor-pointer",
+      "border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] hover:bg-[var(--surface-hover)] cursor-pointer",
   };
 
   if (href) {

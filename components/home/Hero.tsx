@@ -5,9 +5,9 @@ import backgroundImage from "@/public/Generated image 1.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden">
+    <section className="relative min-h-svh overflow-hidden">
       <Container>
-        <div className="relative z-10 flex min-h-[100svh] -translate-y-[6vh] flex-col items-center justify-center pb-16 pt-28 text-center md:-translate-y-[8vh]">
+        <div className="relative z-10 flex min-h-svh translate-y-[-6vh] flex-col items-center justify-center pb-16 pt-28 text-center md:translate-y-[-8vh]">
           <div className="mb-4 flex flex-col items-center gap-4 md:mb-5">
             <Image
               src="/icon.png"

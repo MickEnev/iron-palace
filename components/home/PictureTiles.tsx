@@ -2,9 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import gymInterior from "@/public/GymInterior.png";
-import roofTop from "@/public/Rooftop2.png";
+import gymInterior from "@/public/Interior.png";
+import roofTop from "@/public/Rooftop3.png";
 import recovery from "@/public/Recovery.png";
+import outdoorGym from "@/public/OutdoorGym.png";
 
 const tiles = [
   {
@@ -18,14 +19,14 @@ const tiles = [
     image: roofTop,
   },
   {
+    title: "Outdoor Gym",
+    alt: "Premium gym training area",
+    image: outdoorGym,
+  },
+  {
     title: "Recovery Spaces",
     alt: "Gym recovery amenities",
     image: recovery,
-  },
-  {
-    title: "Elite Atmosphere",
-    alt: "Premium gym training area",
-    image: gymInterior,
   },
 ];
 
@@ -44,7 +45,7 @@ const PictureTiles = () => {
       ([entry]) => {
         setTextVisible(entry.isIntersecting);
       },
-      { threshold: 0.35 }
+      { threshold: 0.35 },
     );
 
     observer.observe(element);
@@ -67,8 +68,8 @@ const PictureTiles = () => {
         </h1>
 
         <p className="mt-8 max-w-4xl text-2xl leading-tight text-white/85 md:text-4xl">
-          A king doesn&apos;t live with the small folk. So why would you train with
-          them?
+          A king doesn&apos;t live with the small folk. So why would you train
+          with them?
         </p>
       </div>
 
@@ -82,6 +83,7 @@ const PictureTiles = () => {
               src={tile.image}
               alt={tile.alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
 
