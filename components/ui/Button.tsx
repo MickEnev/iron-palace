@@ -4,9 +4,15 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   href?: string;
+  newTab?: boolean;
 };
 
-const Button = ({ children, variant = "primary", href }: ButtonProps) => {
+const Button = ({
+  children,
+  variant = "primary",
+  href,
+  newTab,
+}: ButtonProps) => {
   const baseClasses =
     "inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-bold uppercase tracking-wide transition-colors";
 
@@ -19,7 +25,11 @@ const Button = ({ children, variant = "primary", href }: ButtonProps) => {
 
   if (href) {
     return (
-      <Link href={href} className={`${baseClasses} ${variantClasses[variant]}`}>
+      <Link
+        href={href}
+        target={newTab ? "_blank" : undefined}
+        className={`${baseClasses} ${variantClasses[variant]}`}
+      >
         {children}
       </Link>
     );

@@ -2,11 +2,12 @@ import Link from "next/link";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Training", href: "/training" },
     { name: "Events", href: "/events" },
     { name: "Coaches", href: "/coaches" },
-    { name: "Pricing", href: "/pricing" },
+    { name: "FAQ", href: "/faq" },
     { name: "Tours", href: "/tours" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Day Passes", href: "/day-passes" },
   ];
 
   return (
