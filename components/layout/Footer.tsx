@@ -50,7 +50,7 @@ const Footer = () => {
               />
               <button
                 type="button"
-                className="min-h-12 rounded-md bg-white px-7 font-heading text-sm font-black uppercase text-black transition hover:bg-(--primary)"
+                className="cursor-pointer min-h-12 rounded-md bg-white px-7 font-heading text-sm font-black uppercase text-black transition duration-200 hover:scale-[1.03] hover:bg-(--primary)"
               >
                 Sign Up
               </button>

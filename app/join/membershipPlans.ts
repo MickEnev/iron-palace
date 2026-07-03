@@ -1,5 +1,5 @@
 export type MembershipPlan = {
-  id: "month-to-month" | "scrubs-and-scholars" | "valor";
+  id: "month-to-month" | "scrubs-and-scholars" | "valor" | "yearly" | "yearly-mtm";
   name: string;
   eyebrow?: string;
   subtitle: string;
@@ -38,5 +38,22 @@ export const membershipPlans: MembershipPlan[] = [
     note: "Discounted rate for Active Duty/Retired Military, Police, Fire, EMT.",
     requirement:
       "Proof of military service or first responder employment required at first visit",
+  },
+  {
+    id: "yearly-mtm",
+    name: "Month To Month (Yearly Commitment)",
+    subtitle: "Annual membership",
+    dueToday: "$199.99",
+    monthly: "$79.99",
+    note: "Save money with an annual commitment.",
+  },
+  {
+    id: "yearly",
+    name: "Yearly",
+    eyebrow: "Best Value",
+    subtitle: "Annual membership",
+    dueToday: "$999.99",
+    monthly: "$0",
+    note: "Save money with an annual commitment.",
   },
 ];

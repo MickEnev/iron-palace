@@ -31,7 +31,7 @@ const CheckoutBar = ({ selectedPlan }: CheckoutBarProps) => {
         <button
           type="button"
           disabled={!selectedPlan}
-          className="cursor-pointer rounded-md bg-white px-8 py-4 text-sm font-black uppercase tracking-widest text-black transition duration-200 hover:scale-[1.03] hover:bg-white/90 disabled:cursor-not-allowed disabled:bg-white/30 disabled:text-white/40 disabled:hover:scale-100"
+          className="cursor-pointer rounded-md bg-white px-8 py-4 text-sm font-black uppercase tracking-widest text-black transition duration-200 hover:scale-[1.03] hover:bg-(--primary) disabled:cursor-not-allowed disabled:bg-white/30 disabled:text-white/40 disabled:hover:scale-100"
         >
           Next
         </button>
