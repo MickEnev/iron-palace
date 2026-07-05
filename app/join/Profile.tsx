@@ -132,7 +132,9 @@ const Profile = ({
                   cancel.
                 </p>
                 <label className="mt-5 block">
-                  <span className="sr-only">Type your full name to confirm</span>
+                  <span className="sr-only">
+                    Type your full name to confirm
+                  </span>
                   <input
                     className={fieldClass}
                     name="consentName"
@@ -155,3 +157,5 @@ const Profile = ({
 };
 
 export default Profile;
+
+// TODO: Add validation to fields

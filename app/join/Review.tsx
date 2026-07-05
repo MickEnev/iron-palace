@@ -46,7 +46,7 @@ const SummaryCard = ({
             <p className="text-sm font-semibold text-white/45 md:text-base">
               {row.label}
             </p>
-            <p className="break-words text-sm font-black text-white md:text-right md:text-base">
+            <p className="wrap-break-word text-sm font-black text-white md:text-right md:text-base">
               {row.value || fallback}
             </p>
           </div>

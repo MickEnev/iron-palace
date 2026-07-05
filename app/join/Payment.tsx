@@ -8,6 +8,7 @@ const Payment = ({ onBack }: ProfileProps) => {
       <button type="button" onClick={onBack}>
         Back
       </button>
+      <h1>Gib me your mone</h1>
     </div>
   );
 };
