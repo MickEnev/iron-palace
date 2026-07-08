@@ -10,7 +10,8 @@ const modalContent = {
     title: "Schedule a tour",
     submitLabel: "Request tour",
     successTitle: "Thanks, we got your request.",
-    successMessage: "Someone from Iron Palace will follow up to confirm your tour.",
+    successMessage:
+      "Someone from Iron Palace will follow up to confirm your tour.",
   },
   contact: {
     eyebrow: "Contact us",
@@ -31,15 +32,19 @@ const modalContent = {
 type LeadModalProps = {
   activeModal: ModalType;
   hasSubmitted: boolean;
+  isSubmitting: boolean;
   onClose: () => void;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  submitError: string;
 };
 
 const LeadModal = ({
   activeModal,
   hasSubmitted,
+  isSubmitting,
   onClose,
   onSubmit,
+  submitError,
 }: LeadModalProps) => {
   const activeContent = modalContent[activeModal];
   const isCancellation = activeModal === "cancellation";
@@ -78,7 +83,7 @@ const LeadModal = ({
           <button
             type="button"
             onClick={onClose}
-            className="flex size-9 items-center justify-center rounded-full border border-white/10 text-xl leading-none text-white/70 transition hover:border-(--primary) hover:text-(--primary)"
+            className="cursor-pointer flex size-9 items-center justify-center rounded-full border border-white/10 text-xl leading-none text-white/70 transition hover:border-(--primary) hover:text-(--primary)"
             aria-label={`Close ${activeContent.title.toLowerCase()} form`}
           >
             x
@@ -203,17 +208,28 @@ const LeadModal = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-md border border-white/10 px-5 py-2.5 font-semibold text-white/80 transition hover:bg-white/10"
+                disabled={isSubmitting}
+                className="cursor-pointer rounded-md border border-white/10 px-5 py-2.5 font-semibold text-white/80 transition hover:bg-white/10"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="rounded-md bg-(--primary) px-5 py-2.5 font-semibold text-black transition hover:bg-(--primary-hover)"
+                disabled={isSubmitting}
+                className="cursor-pointer rounded-md bg-(--primary) px-5 py-2.5 font-semibold text-black transition hover:bg-(--primary-hover) disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {activeContent.submitLabel}
+                {isSubmitting ? "Sending" : activeContent.submitLabel}
               </button>
             </div>
+
+            {submitError && (
+              <p
+                className="text-sm font-semibold text-red-300"
+                aria-live="polite"
+              >
+                {submitError}
+              </p>
+            )}
           </form>
         )}
       </div>

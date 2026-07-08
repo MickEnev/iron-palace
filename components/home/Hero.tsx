@@ -1,9 +1,23 @@
+"use client";
+
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import Image from "next/image";
 import backgroundImage from "@/public/Generated image 1.png";
+import useLeadModal from "../layout/useLeadModal";
+import LeadModal from "../layout/LeadModal";
 
 const Hero = () => {
+  const {
+    activeModal,
+    closeModal,
+    handleFormSubmit,
+    hasSubmitted,
+    isSubmitting,
+    openModal,
+    submitError,
+  } = useLeadModal();
+
   return (
     <section className="relative min-h-svh overflow-hidden">
       <Container>
@@ -32,7 +46,7 @@ const Hero = () => {
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button href="/join">Sign Up Now</Button>
-            <Button href="/tours" variant="secondary">
+            <Button variant="secondary" onClick={() => openModal("tour")}>
               Schedule a Tour
             </Button>
           </div>
@@ -52,6 +66,16 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="absolute bottom-0 left-0 h-64 w-full bg-linear-to-b from-transparent to-black" />
+      {activeModal && (
+        <LeadModal
+          activeModal={activeModal}
+          hasSubmitted={hasSubmitted}
+          isSubmitting={isSubmitting}
+          onClose={closeModal}
+          onSubmit={handleFormSubmit}
+          submitError={submitError}
+        />
+      )}
     </section>
   );
 };

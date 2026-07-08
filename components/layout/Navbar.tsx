@@ -21,7 +21,9 @@ const Navbar = () => {
     closeModal,
     handleFormSubmit,
     hasSubmitted,
+    isSubmitting,
     openModal,
+    submitError,
   } = useLeadModal();
 
   const navItems: NavItem[] = [
@@ -78,8 +80,10 @@ const Navbar = () => {
         <LeadModal
           activeModal={activeModal}
           hasSubmitted={hasSubmitted}
+          isSubmitting={isSubmitting}
           onClose={closeModal}
           onSubmit={handleFormSubmit}
+          submitError={submitError}
         />
       )}
     </header>

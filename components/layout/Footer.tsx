@@ -39,7 +39,9 @@ const Footer = () => {
     closeModal,
     handleFormSubmit,
     hasSubmitted,
+    isSubmitting,
     openModal,
+    submitError,
   } = useLeadModal();
 
   const handleNewsletterSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -187,8 +189,10 @@ const Footer = () => {
         <LeadModal
           activeModal={activeModal}
           hasSubmitted={hasSubmitted}
+          isSubmitting={isSubmitting}
           onClose={closeModal}
           onSubmit={handleFormSubmit}
+          submitError={submitError}
         />
       )}
     </footer>
