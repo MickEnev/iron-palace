@@ -171,7 +171,7 @@ const Footer = () => {
           <p className="text-white/80">
             &copy; 2026 Iron Palace. All Rights Reserved
           </p>
-          <p className="mt-2 font-heading text-white">
+          {/* <p className="mt-2 font-heading text-white">
             Learn More | Train Hard | Be More
           </p>
           <div className="mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
@@ -181,7 +181,7 @@ const Footer = () => {
                 <span>{link}</span>
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

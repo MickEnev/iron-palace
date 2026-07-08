@@ -68,8 +68,7 @@ const PictureTiles = () => {
         </h1>
 
         <p className="mt-8 max-w-4xl text-2xl leading-tight text-white/85 md:text-4xl">
-          A king doesn&apos;t live with the small folk. So why would you train
-          with them?
+          A king deserves more than ordinary training.
         </p>
       </div>
 
