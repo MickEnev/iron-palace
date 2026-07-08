@@ -182,6 +182,13 @@ const Footer = () => {
               </span>
             ))}
           </div> */}
+          <p className="mx-auto mt-6 max-w-xl text-center text-xs leading-relaxed text-zinc-500">
+            Disclaimer: This website is a fictional portfolio project developed
+            to demonstrate web design and development capabilities. Iron Palace
+            is not an operating business, and all content, pricing, memberships,
+            events, locations, and services displayed are fictitious and
+            provided solely for demonstration purposes.
+          </p>
         </div>
       </div>
 

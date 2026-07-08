@@ -34,7 +34,7 @@ const DayPass = ({ title, price, features }: DayPassProps) => {
         ))}
       </ul>
       <hr className="my-4 border-white/10" />
-      <Button>Shop Now</Button>
+      <Button>Train Today</Button>
     </div>
   );
 };
