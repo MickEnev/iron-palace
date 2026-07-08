@@ -20,8 +20,22 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Iron Palace - Who Will You Lead?",
-  description: "Where kings are forged.",
+  title: {
+    default: "Iron Palace | Luxury Gym Concept",
+    template: "%s | Iron Palace",
+  },
+  description:
+    "A fictional premium gym concept featuring memberships, day passes, coaches, events, tours, and training facilities.",
+  metadataBase: new URL("https://iron-palace-henna.vercel.app/"),
+  openGraph: {
+    title: "Iron Palace",
+    description: "A fictional premium gym concept website.",
+    url: "https://iron-palace-henna.vercel.app/",
+    siteName: "Iron Palace",
+    images: ["/opengraph-image.png"],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
