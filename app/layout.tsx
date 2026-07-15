@@ -48,7 +48,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
+        <div
+          className="fixed inset-x-0 top-0 z-60 flex min-h-9 items-center justify-center bg-(--primary) px-4 py-2 text-center text-xs font-bold text-black sm:text-sm"
+          role="note"
+        >
+          Demo only: membership, tour, and contact requests are not sent or
+          processed.
+        </div>
         <Navbar />
         {children}
         <Footer />

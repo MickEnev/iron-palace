@@ -59,7 +59,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed left-0 top-0 z-50 flex w-full justify-center px-4 pt-5 text-sm">
+    <header className="fixed left-0 top-12 z-50 flex w-full justify-center px-4 pt-5 text-sm sm:top-9">
       <nav className="flex w-full max-w-4xl items-center justify-between gap-6 rounded-full border border-white/10 bg-black/55 px-5 py-3 text-sm shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md sm:px-7">
         <Link
           href="/"
