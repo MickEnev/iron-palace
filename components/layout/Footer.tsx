@@ -168,6 +168,17 @@ const Footer = () => {
           <p className="text-white/80">
             &copy; 2026 Iron Palace. All Rights Reserved
           </p>
+          <p className="mt-1 normal-case text-white/45">
+            Website designed by{" "}
+            <Link
+              href="https://www.veriqdigital.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-(--primary)"
+            >
+              Veriq Digital
+            </Link>
+          </p>
           {/* <p className="mt-2 font-heading text-white">
             Learn More | Train Hard | Be More
           </p>
